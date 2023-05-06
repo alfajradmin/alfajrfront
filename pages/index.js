@@ -5,7 +5,7 @@ import Layout from "./../components/Layout";
 import HighlightsSlider from "./../components/HighlightsSlider";
 
 import Header from "../components/Header";
-import PublicationsSlider from "../components/PublicationsSlider";
+
 import { API_URL } from "@/config/index";
 
 import Upcomings from "../components/Upcomings";
@@ -15,6 +15,7 @@ import SocialNetworksSidebar from "./../components/SocialNetworksSidebar";
 import Blog from "./../components/Blog";
 import AlbumsSlider from "./../components/AlbumsSlider";
 import MobileSidebar from "./../components/MobileSidebar";
+import AcademicPrograms from "../components/AcademicPrograms";
 
 export default function Home({ data }) {
   return (
@@ -38,9 +39,7 @@ export default function Home({ data }) {
 
               {/* reports*/}
               {data && data.Academic_Programs && (
-                <PublicationsSlider
-                  Academic_Programs={data.Academic_Programs}
-                />
+                <AcademicPrograms Academic_Programs={data.Academic_Programs} />
               )}
 
               {/* reports*/}
@@ -100,7 +99,7 @@ export async function getServerSideProps() {
 
   //fetching sliderimgs
   const academic_programs_res = await fetch(
-    `${API_URL}/api/academic-programs?populate=*&sort=rank:asc&pagination[limit]=9`
+    `${API_URL}/api/academic-programs?populate=*&sort=rank:asc&pagination[limit]=4`
   );
   const Academic_Programs = await academic_programs_res.json();
 
