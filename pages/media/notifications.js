@@ -5,14 +5,14 @@ import { API_URL } from "@/config/index";
 import Layout from "@/components/Layout";
 import ReactPaginate from "react-paginate";
 import ReactMarkdown from "react-markdown";
-const PressReleases = () => {
+const Notifications = () => {
   const [items, setItems] = useState([]);
   const [pageCount, setpageCount] = useState(0);
   let limit = 10;
   useEffect(() => {
     const getVideos = async () => {
       const res = await fetch(
-        `${API_URL}/api/posts?filters[type][$eq]=Press Release&sort=createdAt:desc&pagination[pageSize]=${limit}`
+        `${API_URL}/api/notifications?sort=rank:desc&pagination[pageSize]=${limit}`
         // `https://jsonplaceholder.typicode.com/comments?_page=1&_limit=${limit}`
       );
       const data = await res.json();
@@ -28,7 +28,7 @@ const PressReleases = () => {
   // console.log("items", items);
   const fetchVideos = async (currentPage) => {
     const res = await fetch(
-      `${API_URL}/api/posts?filters[type][$eq]=Press Release&sort=createdAt:desc&pagination[page]=${currentPage}&pagination[pageSize]=${limit}`
+      `${API_URL}/api/notifications?sort=rank:desc&pagination[page]=${currentPage}&pagination[pageSize]=${limit}`
       // `https://jsonplaceholder.typicode.com/comments?_page=${currentPage}&_limit=${limit}`
     );
     const data = await res.json();
@@ -44,7 +44,7 @@ const PressReleases = () => {
     setItems(publicationFromServer);
   };
   return (
-    <Layout title="Press Releases">
+    <Layout title="Notifications">
       <div className="wrapper ">
         {/* main content */}
         <main id="content">
@@ -53,47 +53,48 @@ const PressReleases = () => {
               <div className="col-sm-12">
                 <div className="block-title-6 text-center">
                   <h4 className="h5 border-primary">
-                    <span className="bg-primary text-white">Press Releases</span>
+                    <span className="bg-primary text-white">Notifications</span>
                   </h4>
                 </div>
-                   <div className="">
-                  {items && items.data?.map((post) => (
-                    <div
-                      className="card border-0 border-bottom p-2"
-                      key={post.id}
-                    >
-                      <div className="card-body">
-                        <Link href={`${post.attributes.slug}`}>
-                          <h4 className="card-title" key={post.id}>
-                            {post.attributes.title}
-                          </h4>
+                <div className="">
+                  {items &&
+                    items.data?.map((post) => (
+                      <div
+                        className="card border-0 border-bottom p-2"
+                        key={post.id}
+                      >
+                        <div className="card-body">
+                          <Link href={`${post.attributes.slug}`}>
+                            <h4 className="card-title" key={post.id}>
+                              {post.attributes.title}
+                            </h4>
 
-                          <p>
-                            {" "}
-                            <small>
+                            <p>
                               {" "}
-                              <time dateTime="2019-10-21">
-                                {moment(post.attributes.createdAt).format(
-                                  "Do MMMM YYYY"
-                                )}
-                              </time>
-                            </small>
-                          </p>
-                          <p
-                            className="card-text mt-3"
-                            style={{ textAlign: "justify" }}
-                          >
-                            <ReactMarkdown>
-                              {post.attributes.description && post.attributes.description
-                                .substring(0, 300)
-                                .concat("...")
-                              }
-                            </ReactMarkdown>
-                          </p>
-                        </Link>
+                              <small>
+                                {" "}
+                                <time dateTime="2019-10-21">
+                                  {moment(post.attributes.createdAt).format(
+                                    "Do MMMM YYYY"
+                                  )}
+                                </time>
+                              </small>
+                            </p>
+                            <p
+                              className="card-text mt-3"
+                              style={{ textAlign: "justify" }}
+                            >
+                              <ReactMarkdown>
+                                {post.attributes.description &&
+                                  post.attributes.description
+                                    .substring(0, 300)
+                                    .concat("...")}
+                              </ReactMarkdown>
+                            </p>
+                          </Link>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
                 </div>
                 <ReactPaginate
                   previousLabel={"previous"}
@@ -123,4 +124,4 @@ const PressReleases = () => {
   );
 };
 
-export default PressReleases;
+export default Notifications;

@@ -15,7 +15,7 @@ const SocialNetworksSidebar = (props) => {
             <li className="facebook">
               <Link
                 className="bg-facebook text-white"
-                href="https://www.facebook.com/SSDOPakistan/"
+                href="https://www.facebook.com/AlFajarInstitute/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="facebook"
@@ -26,7 +26,7 @@ const SocialNetworksSidebar = (props) => {
             <li className="twitter">
               <Link
                 className="bg-twitter text-white"
-                href="https://twitter.com/SSDOPakistan"
+                href="https://twitter.com/AlFajarInstitute"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="twitter"
@@ -34,37 +34,15 @@ const SocialNetworksSidebar = (props) => {
                 Twitter
               </Link>
             </li>
-            <li className="instagram">
-              <Link
-                className="bg-instagram text-white"
-                href="https://www.instagram.com/ssdo_pakistan/?hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="instagram"
-              >
-                Instagram
-              </Link>
-            </li>
             <li className="youtube">
               <Link
                 className="bg-youtube text-white"
-                href="https://www.youtube.com/@ssdopakistan7196/videos"
+                href="https://www.youtube.com/@mumtazali512"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="youtube"
               >
                 Youtube
-              </Link>
-            </li>
-            <li className="linkedin">
-              <Link
-                className="bg-linkedin text-white"
-                href="https://www.linkedin.com/company/ssdopakistan/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="linkedin"
-              >
-                Linkedin
               </Link>
             </li>
           </ul>
@@ -86,7 +64,7 @@ const SocialNetworksSidebar = (props) => {
         >
           <TwitterTimelineEmbed
             sourceType="profile"
-            screenName="SSDOPakistan"
+            screenName="AIFajrInstitute"
             options={{ height: 830 }}
           />
         </aside>

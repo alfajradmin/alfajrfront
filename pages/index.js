@@ -28,15 +28,12 @@ export default function Home({ data }) {
                 {data && data.Upcomings && data.Upcomings.data && (
                   <Upcomings Upcomings={data.Upcomings} />
                 )}
-                {data &&
-                  data.SliderHighlights &&
-                  data.Notifications &&
-                  data.Notificationss.data && (
-                    <HighlightsSlider
-                      Notifications={data.Notifications}
-                      SliderHighlights={data.SliderHighlights}
-                    />
-                  )}
+                {data && data.SliderHighlights && data.Notifications && (
+                  <HighlightsSlider
+                    Notifications={data.Notifications}
+                    SliderHighlights={data.SliderHighlights}
+                  />
+                )}
               </div>
 
               {/* reports*/}
