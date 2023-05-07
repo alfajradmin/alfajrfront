@@ -219,3 +219,7 @@ box-shadow: 0 10px 40px -10px rgba(0,64,128,.09);
   background-color: #419d3b !important;
 }
 /***************************/
+.social-two li a, .social-one li a {
+ 
+  width: 200px !important;
+}

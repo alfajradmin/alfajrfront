@@ -31,29 +31,33 @@ const AcademicPrograms = ({ Academic_Programs }) => {
                     height: "14rem",
                     backgroundColor: `${program.attributes.BackgroundColor}`,
                     justifyContent: "center",
+                    borderRadius: "10px",
                   }}
                 >
                   <Link
                     className="text-white"
-                    href={`academilc-programs/${program.attributes.slug}`}
+                    href={`academic-programs/${program.attributes.slug}`}
                     target="_blank"
                     style={{ textAlign: "justify" }}
                   >
-                    <div style={{ marginBottom: "20px", paddingTop: "30px" }}>
+                    <div style={{ marginBottom: "20px", paddingTop: "45px" }}>
                       <i
                         className={program.attributes.icon}
                         color="white"
                         style={{
                           color: "white",
-                          fontSize: "4rem",
-                          marginLeft: "6rem",
+                          fontSize: "3rem",
+                          marginLeft: "6.6rem",
+                          textAlign: "center",
                         }}
                       />
                       <p
                         style={{
                           textAlign: "center",
                           color: "white",
-                          marginTop: "10px",
+                          marginTop: "30px",
+                          fontWeight: "bolder",
+                          fontSize: "0.96rem",
                         }}
                       >
                         {program.attributes.title}{" "}

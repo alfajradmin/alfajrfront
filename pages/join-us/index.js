@@ -46,51 +46,54 @@ const Jobs = () => {
   };
   return (
     <Layout title="Join Us">
-    <div class="container p-4 mt-20">
-      <div className="block-title-6 text-center">
-        <h4 className="h5 border-primary">
-          <span className="bg-primary text-white">SSDO Jobs</span>
-        </h4>
-      </div>
-      <div className="d-flex flex-wrap">
-        {items &&
-          items.data?.map((job) => {
-            return (
-              <Card style={{ width: "30rem", margin: "20px" }} key={job.attributes.id}>
-                <Card.Body>
-                  <Card.Title>{job.attributes.title}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    Job Status : {job.attributes.status}
-                  </Card.Subtitle>
+      <div class="container p-4 mt-20">
+        <div className="block-title-6 text-center">
+          <h4 className="h5 border-primary">
+            <span className="bg-primary text-white">Alfajr Jobs</span>
+          </h4>
+        </div>
+        <div className="d-flex flex-wrap">
+          {items &&
+            items.data?.map((job) => {
+              return (
+                <Card
+                  style={{ width: "30rem", margin: "20px" }}
+                  key={job.attributes.id}
+                >
+                  <Card.Body>
+                    <Card.Title>{job.attributes.title}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">
+                      Job Status : {job.attributes.status}
+                    </Card.Subtitle>
 
-                  <Link href={`/join-us/${job.attributes.slug}`}>
-                    View Job
-                  </Link>
-                </Card.Body>
-              </Card>
-            );
-          })}
+                    <Link href={`/join-us/${job.attributes.slug}`}>
+                      View Job
+                    </Link>
+                  </Card.Body>
+                </Card>
+              );
+            })}
+        </div>
+        <ReactPaginate
+          previousLabel={"previous"}
+          nextLabel={"next"}
+          breakLabel={"..."}
+          pageCount={pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={3}
+          onPageChange={handlePageClick}
+          containerClassName={"pagination justify-content-center"}
+          pageClassName={"page-item"}
+          pageLinkClassName={"page-link"}
+          previousClassName={"page-item"}
+          previousLinkClassName={"page-link"}
+          nextClassName={"page-item"}
+          nextLinkClassName={"page-link"}
+          breakClassName={"page-item"}
+          breakLinkClassName={"page-link"}
+          activeClassName={"active"}
+        />
       </div>
-      <ReactPaginate
-        previousLabel={"previous"}
-        nextLabel={"next"}
-        breakLabel={"..."}
-        pageCount={pageCount}
-        marginPagesDisplayed={2}
-        pageRangeDisplayed={3}
-        onPageChange={handlePageClick}
-        containerClassName={"pagination justify-content-center"}
-        pageClassName={"page-item"}
-        pageLinkClassName={"page-link"}
-        previousClassName={"page-item"}
-        previousLinkClassName={"page-link"}
-        nextClassName={"page-item"}
-        nextLinkClassName={"page-link"}
-        breakClassName={"page-item"}
-        breakLinkClassName={"page-link"}
-        activeClassName={"active"}
-      />
-    </div>
     </Layout>
   );
 };

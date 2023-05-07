@@ -5,11 +5,10 @@ import ModalHeader from "react-bootstrap/ModalHeader";
 import Carousel from "react-multi-carousel";
 import { API_URL } from "./../config/index";
 import Link from "next/link";
-import Image from 'next/image'
+import Image from "next/image";
 const PublicationModal = (props) => {
-
-  console.log("publication id is", props);
- // return false;
+  //console.log("publication id is", props);
+  // return false;
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -51,15 +50,15 @@ const PublicationModal = (props) => {
           itemClass="carousel-item-padding-40-px"
         >
           <Link
-            href={API_URL + `${props.data.attributes.File.data.attributes.url
-              } `}
-            key={props.id}>
+            href={
+              API_URL + `${props.data.attributes.File.data.attributes.url} `
+            }
+            key={props.id}
+          >
             <Image
               width={500}
               height={500}
-              src={
-                props.data.attributes.cover.data.attributes.url
-              }
+              src={props.data.attributes.cover.data.attributes.url}
               key={props.id}
               style={{
                 height: "100%",
@@ -68,8 +67,6 @@ const PublicationModal = (props) => {
               }}
             />
           </Link>
-
-
         </Carousel>
       </Modal.Body>
     </Modal>

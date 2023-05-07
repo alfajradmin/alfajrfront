@@ -19,7 +19,7 @@ import AcademicPrograms from "../components/AcademicPrograms";
 
 export default function Home({ data }) {
   return (
-    <Layout title="SSDO Pakistan">
+    <Layout title="Alfajr Institute">
       <div className="wrapper ">
         {/* main content */}
         <main id="content">

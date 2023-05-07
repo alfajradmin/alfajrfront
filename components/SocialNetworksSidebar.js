@@ -11,40 +11,48 @@ const SocialNetworksSidebar = (props) => {
               <span>Social network</span>
             </h4>
           </div>
+
           <ul className="list-unstyled social-two">
-            <li className="facebook">
-              <Link
-                className="bg-facebook text-white"
-                href="https://www.facebook.com/AlFajarInstitute/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="facebook"
-              >
-                Facebook
-              </Link>
-            </li>
-            <li className="twitter">
-              <Link
-                className="bg-twitter text-white"
-                href="https://twitter.com/AlFajarInstitute"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="twitter"
-              >
-                Twitter
-              </Link>
-            </li>
-            <li className="youtube">
-              <Link
-                className="bg-youtube text-white"
-                href="https://www.youtube.com/@mumtazali512"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="youtube"
-              >
-                Youtube
-              </Link>
-            </li>
+            <div className="row">
+              <li className="facebook">
+                <Link
+                  className="bg-facebook text-white"
+                  href="https://www.facebook.com/AlFajarInstitute/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="facebook"
+                >
+                  Facebook
+                </Link>
+              </li>
+
+              <div className="row">
+                <li className="twitter">
+                  <Link
+                    className="bg-twitter text-white"
+                    href="https://twitter.com/AlFajarInstitute"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="twitter"
+                  >
+                    Twitter
+                  </Link>
+                </li>
+              </div>
+            </div>
+            <div className="row">
+              <li className="youtube">
+                <Link
+                  className="bg-youtube text-white"
+                  href="https://www.youtube.com/@mumtazali512"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="youtube"
+                >
+                  Youtube
+                </Link>
+              </li>
+            </div>
           </ul>
           <div className="gap-15"></div>
         </aside>

@@ -10,89 +10,43 @@ const ContactUs = () => {
           </h4>
         </div>
 
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex justify-content-center">
-          <div class="col-4 mb-4 mb-lg-0">
+        <div class="row justify-content-center">
+          <div class="col-6 mb-4 mb-lg-0">
             <div class="card card-lg text-center h-100">
               <div class="card-body">
                 <div class="mb-3">
-                  <i class="bi-person-circle fs-1 text-dark"></i>
-                </div>
-
-                <div class="mb-5">
-                  <h4 className="fw-bold">Head Office</h4>
+                  <i class="bi bi-geo"></i>
                 </div>
 
                 <div class="mb-5">
                   <span class="d-block">
-                    Islamabad: Suit # 14, 3rd Floor, Al-Baber Centre, F-8 Markaz
-                    Islamabad
+                    Khayaban e Mustafa, Mari Indus Dist Mianwali Mianwali,
+                    Punjab, Pakistan-42350
                   </span>
                 </div>
 
                 <div class="d-grid mb-3">
                   <a class="btn btn-white" href="mailto: info@ssdo.org.pk ">
-                    <i class="bi-envelope-open me-2"></i> info@ssdo.org.pk
+                    <i class="bi-envelope-open me-2"></i>info@alfajar.org.pk
                   </a>
                 </div>
 
                 <a class="btn btn-ghost-dark btn-sm" href="#">
-                  <i class="bi-telephone me-2"></i> +92-051-2287298
+                  <i class="bi-telephone me-2"></i> +92-304-1115554
                 </a>
               </div>
             </div>
           </div>
 
-          <div class="col-4 mb-4 mb-lg-0">
-            <div class="card card-lg text-center h-100">
-              <div class="card-body">
-                <div class="mb-3">
-                  <i class="bi-wallet2 fs-1 text-dark"></i>
-                </div>
-
-                <div class="mb-5">
-                  <h4 className="fw-bold">Sub Offices</h4>
-                </div>
-
-                <div class="mb-5">
-                  <span class="d-block">
-                    Lahore: Office # 504, 5th Floor, Land Mark Plaza, Jail Road,
-                    Lahore
-                  </span>
-                </div>
-
-                <div class="mb-5">
-                  <span class="d-block">
-                    Multan: House #1065/g, Street # 1, Qadeer Abad, Multan
-                  </span>
-                </div>
-
-                <div class="mb-5">
-                  <span class="d-block">
-                    Sukkur: Gulshan-e-Iqal Colony, Near Bijrani Chowk, Golimar
-                    Road, Sukkur
-                  </span>
-                </div>
-                {/* <div class="d-grid mb-3">
-                <a class="btn btn-white" href="mailto:billing@site.com">
-                  <i class="bi-envelope-open me-2"></i> billing@site.com
-                </a>
-              </div> */}
-
-                <a class="btn btn-ghost-dark btn-sm" href="#">
-                  <i class="bi-telephone me-2"></i> (062) 1099222
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-4 mb-4 mb-lg-0">
+          <div class="col-6 mb-4 mb-lg-0">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13275.493038276814!2d73.0372902!3d33.7122283!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbe52c5555555%3A0xb598d31787fafb36!2sSustainable%20Social%20Development%20Organization%20(SSDO)!5e0!3m2!1sen!2s!4v1680010412451!5m2!1sen!2s"
-              style={{ border: "0", width: "100%", height: "450px" }}
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3348.310149768344!2d71.56432500000001!3d32.94282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x392767d52833f655%3A0x41f922270e636337!2sAl%20Fajar%20Institute!5e0!3m2!1sen!2sus!4v1683466435959!5m2!1sen!2sus"
+              width="600"
+              height="450"
+              style={{ border: "0" }}
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              async
-              defer
             ></iframe>
           </div>
         </div>
